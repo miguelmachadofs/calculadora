@@ -1,0 +1,162 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES *******************************/
+:root {
+  --header-height: 4.5rem;
+
+  /* colors */
+  --hue: 159;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+
+  /* fonts */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
+}
+
+/* BASE */
+body {
+  font: 400 1rem var(--body-font);
+  color: var(--text-color);
+  background: var(--body-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+.title {
+  font: 700 var(--title-font-size) var(--title-font);
+  color: var(--title-color);
+  -webkit-font-smoothing: auto;
+}
+
+.button {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  display: inline-flex;
+  height: 2rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: auto;
+  border: solid 0.1px;
+  border-color: black;
+  border-radius: 0.25rem;
+  font: 500 1rem var(--body-font);
+}
+
+/* LAYOUT */
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* SECTION */
+section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+section .painel {
+  border: solid 1px;
+}
+
+section #input-result {
+  text-align: right;
+
+  width: 100%;
+  height: auto;
+
+  padding: 1rem 2rem;
+  border: 0px;
+}
+
+section #modal-result {
+  text-align: right;
+
+  width: 100%;
+  height: 4rem;
+
+  padding: 1rem 2rem;
+  border: 0px;
+
+  font: 400 1.5rem var(--body-font);
+}
+
+section .modal-open {
+  display: flex;
+  justify-content: right;
+
+  border: solid 2px;
+  color: brown;
+
+  padding: 1rem 2rem;
+
+  width: 100%;
+  height: auto;
+}
+
+section table #b-apagar {
+  border-color: rgb(201, 3, 3);
+  color: rgb(201, 3, 3);
+}
+
+section table #b-apagar:hover {
+  background-color: red;
+  color: white;
+}
+
+section table #b-result {
+  background-color: blue;
+  color: white;
+}
+
+section table #b-result:hover {
+  background-color: white;
+  color: blue;
+}
+
+section table .button-teclado,
+section table .button-teclado-operador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: solid 1px;
+
+  transition: 0.2s;
+}
+
+section table .button-teclado-operador {
+  border-color: mediumblue;
+  color: mediumblue;
+}
+
+section table .button-teclado:hover {
+  background-color: darkgrey;
+  color: white;
+}
+
+section table .button-teclado-operador:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* MODAIS */

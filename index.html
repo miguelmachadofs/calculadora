@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="assets/fonts/style.css" />
+  </head>
+  <body>
+    <header>
+      <p>Calculadora</p>
+    </header>
+    <main>
+      <div class="container grid">
+        <section class="grid">
+          <div class="painel">
+            <input
+              id="input-result"
+              type="text"
+              placeholder="0"
+              onkeypress="inserirValor(event, true)"
+            />
+            <div id="modal-result"></div>
+          </div>
+          <table>
+            <tr>
+              <td>
+                <div
+                  id="b-apagar-tudo"
+                  class="button-teclado"
+                  onclick="reset()"
+                >
+                  CE
+                </div>
+              </td>
+              <td>
+                <div id="b-apagar-atual" class="button-teclado">C</div>
+              </td>
+              <td>
+                <div
+                  id="b-apagar"
+                  class="button-teclado"
+                  onclick="botaoApagar()"
+                >
+                  <i class="icon-close"></i>
+                </div>
+              </td>
+              <td>
+                <div
+                  id="b-o-divisao"
+                  class="button-teclado-operador"
+                  onclick="inserirValor('/')"
+                >
+                  <i class="icon-">/</i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div
+                  id="b-sete"
+                  class="button-teclado"
+                  onclick="inserirValor('7')"
+                >
+                  7
+                </div>
+              </td>
+              <td>
+                <div
+                  id="b-oito"
+                  class="button-teclado"
+                  onclick="inserirValor('8')"
+                >
+                  8
+                </div>
+              </td>
+              <td>
+                <div
+                  id="b-nove"
+                  class="button-teclado"
+                  onclick="inserirValor('9')"
+                >
+                  9
+                </div>
+              </td>
+              <td>
+                <div
+                  id="b-o-multiplicacao"
+                  class="button-teclado-operador"
+                  onclick="inserirValor('x')"
+                >
+                  <i class="icon-close"></i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div
+                  id="b-quatro"
+                  class="button-teclado"
+                  onclick="inserirValor('4')"
+                >
+                  4
+                </div>
+              </td>
+              <td>
+                <div
+                  id="b-cinco"
+                  class="button-teclado"
+                  onclick="inserirValor('5')"
+                >
+                  5
+                </div>
+              </td>
+              <td>
+                <div
+                  id="b-seis"
+                  class="button-teclado"
+                  onclick="inserirValor('6')"
+                >
+                  6
+                </div>
+              </td>
+              <td>
+                <div
+                  id="b-o-subtracao"
+                  class="button-teclado-operador"
+                  onclick="inserirValor('-')"
+                >
+                  <i class="icon-">-</i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div
+                  id="b-um"
+                  class="button-teclado"
+                  onclick="inserirValor('1')"
+                >
+                  1
+                </div>
+              </td>
+              <td>
+                <div
+                  id="b-dois"
+                  class="button-teclado"
+                  onclick="inserirValor('2')"
+                >
+                  2
+                </div>
+              </td>
+              <td>
+                <div
+                  id="b-tres"
+                  class="button-teclado"
+                  onclick="inserirValor('3')"
+                >
+                  3
+                </div>
+              </td>
+              <td>
+                <div
+                  id="b-o-soma"
+                  class="button-teclado-operador"
+                  onclick="inserirValor('+')"
+                >
+                  <i class="icon-">+</i>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div id="b-trocar-sinal" class="button-teclado">+/-</div>
+              </td>
+              <td>
+                <div
+                  id="b-zero"
+                  class="button-teclado"
+                  onclick="inserirValor('0')"
+                >
+                  0
+                </div>
+              </td>
+              <td>
+                <div
+                  id="b-virgula"
+                  class="button-teclado"
+                  onclick="inserirValor('.')"
+                >
+                  ,
+                </div>
+              </td>
+              <td>
+                <div
+                  id="b-result"
+                  class="button-teclado-operador"
+                  onclick="botaoIgual()"
+                >
+                  =
+                </div>
+              </td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
